@@ -310,8 +310,7 @@ header {
 
 .category-items {
   display: grid;
-  grid-template-columns: auto;
-  flex-wrap: wrap;
+  grid-template-columns: 1fr 1fr;
   gap: 2rem;
 }
 
