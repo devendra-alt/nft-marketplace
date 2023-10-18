@@ -16,6 +16,17 @@
       <div class="menu">
         <img src="./assets/Burger Menu.svg" alt="menu" />
       </div>
+      <div class="desktop-menu">
+        <nav class="nav-links">
+          <a href="" class="nav-link">Marketplace</a>
+          <a href="" class="nav-link">Rankings</a
+          ><a href="" class="nav-link">Connect a wallet</a>
+          <button class="sign-up">
+            <img src="./assets/User.svg" alt="user avatar" />
+            <p>Sign Up</p>
+          </button>
+        </nav>
+      </div>
     </header>
     <section class="hero">
       <h4 class="hero-title">Discover digital art & Collect NFTs</h4>
@@ -60,24 +71,70 @@
       <p class="trending-text">
         Checkout our weekly updated trending collection.
       </p>
-      <div class="trending-nft-gallery">
-        <div class="main">
-          <img src="./assets/Primary-dog.png" alt="dog nft" />
+      <div class="trending-nft">
+        <div id="collection-1">
+          <div class="trending-nft-gallery">
+            <div class="main">
+              <img src="./assets/Primary-dog.png" alt="dog nft" />
+            </div>
+            <div class="other1">
+              <img src="./assets/SecondaryPhoto.png" alt="dog nft" />
+            </div>
+            <div class="other2">
+              <img src="./assets/SecondaryPhoto2.png" alt="dog nft" />
+            </div>
+            <div class="other3">
+              <p>1025+</p>
+            </div>
+          </div>
+          <h5 class="gallery-title">DSGN Animals</h5>
+          <div class="user">
+            <img src="./assets/MrFox.png" alt="Mr Fox user" />
+            <p class="user-name">MrFox</p>
+          </div>
         </div>
-        <div class="other1">
-          <img src="./assets/SecondaryPhoto.png" alt="dog nft" />
+        <div id="collection-2">
+          <div class="trending-nft-gallery">
+            <div class="main">
+              <img src="./assets/mashroom_placeholder.png" alt="mashroom nft" />
+            </div>
+            <div class="other1">
+              <img src="./assets/mashroom_placeholder.png" alt="mashroom nft" />
+            </div>
+            <div class="other2">
+              <img src="./assets/mashroom_placeholder.png" alt="mashroom nft" />
+            </div>
+            <div class="other3">
+              <p>6+</p>
+            </div>
+          </div>
+          <h5 class="gallery-title">Magic Mushrooms</h5>
+          <div class="user">
+            <img src="./assets/MrFox.png" alt="Mr Fox user" />
+            <p class="user-name">MrFox</p>
+          </div>
         </div>
-        <div class="other2">
-          <img src="./assets/SecondaryPhoto2.png" alt="dog nft" />
+        <div id="collection-3">
+          <div class="trending-nft-gallery">
+            <div class="main">
+              <img src="./assets/Primary-dog.png" alt="dog nft" />
+            </div>
+            <div class="other1">
+              <img src="./assets/SecondaryPhoto.png" alt="dog nft" />
+            </div>
+            <div class="other2">
+              <img src="./assets/SecondaryPhoto2.png" alt="dog nft" />
+            </div>
+            <div class="other3">
+              <p>1025+</p>
+            </div>
+          </div>
+          <h5 class="gallery-title">DSGN Animals</h5>
+          <div class="user">
+            <img src="./assets/MrFox.png" alt="Mr Fox user" />
+            <p class="user-name">MrFox</p>
+          </div>
         </div>
-        <div class="other3">
-          <p>1025+</p>
-        </div>
-      </div>
-      <h5 class="gallery-title">DSGN Animals</h5>
-      <div class="user">
-        <img src="./assets/MrFox.png" alt="Mr Fox user" />
-        <p class="user-name">MrFox</p>
       </div>
     </section>
     <section class="top-creators">
@@ -349,32 +406,36 @@
     </section>
     <section class="call-to-action">
       <img src="./assets/Space.png" alt="space" />
-      <h4 class="call-to-action-title">Join our weekly digest</h4>
-      <p class="call-to-action-para">
-        Get exclusive promotions & updates straight to your inbox.
-      </p>
-      <input
-        type="text"
-        class="call-to-action-input"
-        placeholder="Enter Your Email Address"
-      />
-      <button class="call-to-action-btn">
-        <img src="./assets/EnvelopeSimple.svg" alt="" />
-        <p>Subscribe</p>
-      </button>
+      <div class="call-to-action-details">
+        <h4 class="call-to-action-title">Join our weekly digest</h4>
+        <p class="call-to-action-para">
+          Get exclusive promotions & updates straight to your inbox.
+        </p>
+        <input
+          type="text"
+          class="call-to-action-input"
+          placeholder="Enter Your Email Address"
+        />
+        <button class="call-to-action-btn">
+          <img src="./assets/EnvelopeSimple.svg" alt="" />
+          <p>Subscribe</p>
+        </button>
+      </div>
     </section>
     <footer>
-      <div class="logo">
-        <img src="./assets/Storefront.svg" alt="store-front" />
-        <h1 class="main-title">NFT Marketplace</h1>
-      </div>
-      <p class="our-info">NFT marketplace UI created with Anima for Figma.</p>
-      <p class="join-our-community">Join our community</p>
-      <div class="socials-i">
-        <img src="./assets/DiscordLogo.svg" alt="discord" />
-        <img src="./assets/YoutubeLogo.svg" alt="youtube" />
-        <img src="./assets/TwitterLogo.svg" alt="twitter" />
-        <img src="./assets/InstagramLogo.svg" alt="instagram" />
+      <div class="col-1">
+        <div class="logo">
+          <img src="./assets/Storefront.svg" alt="store-front" />
+          <h1 class="main-title">NFT Marketplace</h1>
+        </div>
+        <p class="our-info">NFT marketplace UI created with Anima for Figma.</p>
+        <p class="join-our-community">Join our community</p>
+        <div class="socials-i">
+          <img src="./assets/DiscordLogo.svg" alt="discord" />
+          <img src="./assets/YoutubeLogo.svg" alt="youtube" />
+          <img src="./assets/TwitterLogo.svg" alt="twitter" />
+          <img src="./assets/InstagramLogo.svg" alt="instagram" />
+        </div>
       </div>
       <div class="explore">
         <h5 class="explore-title">Explore</h5>
@@ -396,7 +457,6 @@
           <img src="./assets/EnvelopeSimple.svg" alt="" />
           <p>Subscribe</p>
         </button>
-        <hr />
       </div>
       <p class="copy-right">Ⓒ NFT Market. Use this template freely.</p>
     </footer>

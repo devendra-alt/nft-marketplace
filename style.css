@@ -17,11 +17,21 @@ body {
   color: #fff;
 }
 
+body::-webkit-scrollbar {
+  display: none;
+  overflow-y: none;
+  overflow-x: none;
+}
+
 header {
   padding: 1.5rem 3rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+
+.desktop-menu {
+  display: none;
 }
 
 .logo {
@@ -103,6 +113,7 @@ header {
   justify-content: center;
   align-items: center;
   margin-bottom: 4rem;
+  cursor: pointer;
 }
 
 .get-started > span {
@@ -133,6 +144,8 @@ header {
 
 .trending-nft-gallery {
   display: grid;
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
   grid-template-areas:
     'main main main'
     'main main main'
@@ -145,6 +158,7 @@ header {
 
 .trending-nft-gallery .main {
   grid-area: main;
+  cursor: pointer;
 }
 
 .trending-nft-gallery .main > img {
@@ -154,10 +168,12 @@ header {
 
 .trending-nft-gallery .other1 {
   grid-area: otr1;
+  cursor: pointer;
 }
 
 .trending-nft-gallery .other2 {
   grid-area: otr2;
+  cursor: pointer;
 }
 .trending-nft-gallery .other3 {
   grid-area: otr3;
@@ -169,6 +185,7 @@ header {
   font-size: 1.6rem;
   font-weight: 700;
   font-family: 'Space Mono', monospace;
+  cursor: pointer;
 }
 
 .trending-title {
@@ -224,6 +241,7 @@ header {
   display: flex;
   gap: 2rem;
   align-items: center;
+  cursor: pointer;
 }
 
 .top-creator .img {
@@ -276,6 +294,7 @@ header {
   align-items: center;
   margin-bottom: 4rem;
   gap: 1.2rem;
+  cursor: pointer;
 }
 
 .view-rank-btn > p {
@@ -290,8 +309,8 @@ header {
 }
 
 .category-items {
-  display: flex;
-  flex-direction: row;
+  display: grid;
+  grid-template-columns: auto;
   flex-wrap: wrap;
   gap: 2rem;
 }
@@ -307,6 +326,7 @@ header {
   background-color: var(--primary-color-two);
   border-radius: 2rem;
   flex: 1;
+  cursor: pointer;
 }
 
 .category-item-name {
@@ -422,6 +442,7 @@ header {
   align-items: center;
   margin-bottom: 4rem;
   gap: 1.2rem;
+  cursor: pointer;
 }
 
 .see-all > p {
@@ -441,6 +462,7 @@ header {
   gap: 3rem;
   flex-direction: column;
   opacity: 0.8;
+  cursor: pointer;
 }
 
 .trending-top h3 {
@@ -501,6 +523,7 @@ header {
   align-items: center;
   gap: 1.2rem;
   padding: 1.6rem 0;
+  cursor: pointer;
 }
 
 .see-nft-btn > p {
@@ -540,21 +563,19 @@ header {
   justify-content: center;
   align-items: center;
   gap: 2rem;
-  padding: 2rem;
   border-radius: 2rem;
-}
-
-.work-item > * {
-  max-width: 50%;
+  cursor: pointer;
+  padding: 2rem 0;
 }
 
 .work-item > img {
-  width: 90%;
-  height: 90%;
+  width: 40%;
+  height: 40%;
 }
 
 .work-item-info {
   flex: 1;
+  padding: 0 2rem;
 }
 
 .work-item-title {
@@ -648,6 +669,10 @@ footer {
   gap: 1rem;
 }
 
+.socials-i > * {
+  cursor: pointer;
+}
+
 .explore {
   display: flex;
   flex-direction: column;
@@ -667,6 +692,7 @@ footer {
   font-weight: 400;
   line-height: 2.2rem;
   color: #cccccc;
+  cursor: pointer;
 }
 
 .join-us {
@@ -700,5 +726,393 @@ hr {
   margin-top: 2rem;
 }
 
-@media screen and (min-width: 481px) {
+#collection-2,
+#collection-3 {
+  display: none;
+}
+
+@media screen and (min-width: 512px) {
+  .hero {
+    position: relative;
+    gap: 2rem;
+  }
+
+  .hero > * {
+    width: 45%;
+  }
+
+  .hero .space-walking-card {
+    position: absolute;
+    right: 0;
+    top: 0;
+    padding: 0;
+  }
+  .hero-title {
+    font-size: 3.8rem;
+    line-height: 4.56rem;
+    font-weight: 600;
+  }
+  .get-started {
+    padding: 2.5rem 0;
+  }
+  #collection-1,
+  #collection-2 {
+    display: grid;
+  }
+  .trending-nft {
+    display: flex;
+    flex-direction: row;
+    gap: 3rem;
+  }
+  #collection-1,
+  #collection-2 {
+    width: 50%;
+  }
+
+  .top-creators {
+    position: relative;
+  }
+
+  .top-creators-title,
+  .top-creators-para {
+    width: 40%;
+  }
+
+  .view-rank-btn {
+    position: absolute;
+    top: 2.5rem;
+    right: 0;
+    width: 50%;
+  }
+  .top-creators-chart {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+  .categories-items {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+  }
+  .discover-more {
+    position: relative;
+  }
+  .discover-more-items {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+  .discover-more-item > img {
+    height: auto;
+  }
+  .discover-more-item {
+    flex: 1;
+  }
+  .see-all {
+    position: absolute;
+    top: 1rem;
+    right: 0;
+    width: 40%;
+  }
+  .trending-top {
+    position: relative;
+  }
+  .trending-top .user-popup,
+  .see-nft-btn {
+    width: 30%;
+  }
+  .trending-top h3 {
+    width: 60%;
+  }
+  .trending-top .timer {
+    position: absolute;
+    right: 3rem;
+    top: 40%;
+  }
+  .category-items {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+  .work-items {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  .work-item {
+    flex-direction: column;
+    flex: 1;
+    gap: 1rem;
+  }
+  .work-item > img {
+    width: 100%;
+    height: 100%;
+  }
+  .call-to-action {
+    background-color: var(--primary-color-two);
+    padding: 4rem 3rem;
+    border-radius: 2rem;
+    gap: 3rem;
+    display: flex;
+    flex-direction: row;
+  }
+  .join-us {
+    position: relative;
+  }
+
+  .join-us .call-to-action-input {
+    width: 40%;
+    height: 5rem;
+  }
+
+  .join-us .call-to-action-btn {
+    position: absolute;
+    top: 9.78rem;
+    left: 22rem;
+    width: 30%;
+    height: 5rem;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .menu {
+    display: none;
+  }
+  .desktop-menu {
+    display: block;
+  }
+  .hero {
+    margin-right: 10rem;
+    margin-left: 10rem;
+  }
+  .desktop-menu .nav-links {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+  }
+  .nav-link {
+    color: #fff;
+    font-size: 1.6rem;
+    line-height: 2.24rem;
+    font-weight: 600;
+    text-decoration: none;
+    padding: 2rem;
+  }
+  .sign-up {
+    padding: 1rem 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1.2rem;
+    flex-direction: row;
+    background-color: var(--button-primary-color);
+    border: none;
+    border-radius: 2rem;
+    cursor: pointer;
+  }
+  .sign-up p {
+    font-size: 1.6rem;
+    font-weight: 600;
+    line-height: 2.24rem;
+    color: #fff;
+  }
+  .hero-title,
+  .hero-text,
+  .states {
+    width: 50%;
+  }
+  .get-started {
+    width: 25%;
+  }
+  .hero-title {
+    font-size: 6.7rem;
+    line-height: 7.37rem;
+  }
+  .hero-text {
+    font-size: 2.2rem;
+    line-height: 3.52rem;
+  }
+  .space-walking-card .card-content h5 {
+    font-size: 2.2rem;
+  }
+  .states {
+    justify-content: flex-start;
+    gap: 5rem;
+  }
+  .state-item .data {
+    font-size: 2.8rem;
+  }
+  .state-item .data-name {
+    font-size: 2.3rem;
+  }
+  .space-walking-card {
+    width: 40%;
+    height: auto;
+  }
+  .trending {
+    margin-left: 10rem;
+    margin-right: 10rem;
+    padding: 8rem 0;
+  }
+  .trending-title {
+    font-size: 3.8rem;
+  }
+  .trending-text {
+    font-size: 2.2rem;
+  }
+  #collection-1,
+  #collection-2,
+  #collection-3 {
+    flex: 1;
+  }
+  #collection-3 {
+    display: grid;
+  }
+  .top-creators {
+    margin-left: 10rem;
+    margin-right: 10rem;
+  }
+  .top-creators-title,
+  .top-creators-para {
+    width: 70%;
+  }
+  .top-creators-title {
+    font-size: 3.8rem;
+    line-height: 4.56rem;
+  }
+  .top-creators-para {
+    font-size: 2.2rem;
+    line-height: 3.52rem;
+  }
+  .view-rank-btn {
+    width: 25%;
+  }
+  .top-creators-chart {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: auto;
+  }
+  .category-items {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+  }
+  .categories {
+    padding: 8rem 0;
+    margin-left: 10rem;
+    margin-right: 10rem;
+  }
+  .categories-title {
+    font-size: 3.8rem;
+    line-height: 4.56rem;
+  }
+  .discover-more {
+    padding: 8rem 0;
+    margin-left: 10rem;
+    margin-right: 10rem;
+  }
+  .see-all {
+    top: 10rem;
+    width: 25%;
+  }
+  .discover-more-items {
+    gap: 3rem;
+    padding-top: 6rem;
+  }
+  .discover-more-title {
+    font-size: 3.8rem;
+    line-height: 4.56rem;
+  }
+  .discover-more-subtitle {
+    font-size: 2.2rem;
+    line-height: 3.52rem;
+  }
+  .user-popup,
+  h3,
+  .timer,
+  .see-nft-btn {
+    display: none;
+  }
+  .trending-top {
+    background-image: url(/assets/mashroom.png);
+    height: 60rem;
+    width: 100%;
+  }
+  .works {
+    margin: 8rem 10rem;
+    padding: 0;
+  }
+  .work-item {
+    margin: 0;
+    padding: 2rem 0;
+  }
+  .work-title {
+    font-size: 3.8rem;
+    line-height: 4.56rem;
+  }
+  .work-para {
+    font-size: 2.2rem;
+    line-height: 3.52rem;
+  }
+  .work-item-title {
+    font-size: 2.2rem;
+  }
+  .work-item-info-para {
+    font-size: 1.6rem;
+    line-height: 2.24rem;
+  }
+  .call-to-action {
+    margin: 8rem 10rem;
+  }
+  .call-to-action > img,
+  .call-to-action .call-to-action-details {
+    flex: 1;
+  }
+  .call-to-action-details {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex;
+    position: relative;
+  }
+  .call-to-action-title {
+    font-size: 3.8rem;
+    line-height: 4.56rem;
+    width: 70%;
+  }
+  .call-to-action-para {
+    font-size: 2.2rem;
+    line-height: 3.52rem;
+  }
+  .call-to-action-input {
+    padding: 2rem;
+    width: 80%;
+  }
+  .call-to-action-btn {
+    position: absolute;
+    top: 27.85rem;
+    width: 40%;
+    right: 5rem;
+    padding: 2rem;
+  }
+  footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 4rem 10rem;
+    position: relative;
+  }
+  .explore {
+    margin: 0;
+  }
+  .join-weekly-para {
+    width: 70%;
+  }
+  .copy-right {
+    position: absolute;
+    bottom: 2rem;
+  }
+  .join-us .call-to-action-input {
+    width: 70%;
+  }
+  footer .join-us .call-to-action-btn {
+    position: absolute;
+    top: 12rem;
+    left: 23rem;
+  }
 }
