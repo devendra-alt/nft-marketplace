@@ -453,7 +453,7 @@ header {
 
 .trending-top {
   background-image: linear-gradient(to bottom, #000, #b759ffa5),
-    url(/assets/mashroom.png);
+    url(./assets/mashroom.png);
   background-size: cover;
   background-position: center;
   padding: 12rem 3rem 4rem 3rem;
@@ -1027,7 +1027,7 @@ hr {
     display: none;
   }
   .trending-top {
-    background-image: url(/assets/mashroom.png);
+    background-image: url(./assets/mashroom.png);
     height: 60rem;
     width: 100%;
   }
